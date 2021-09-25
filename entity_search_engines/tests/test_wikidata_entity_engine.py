@@ -5,8 +5,7 @@ from entity_search_engines.tests.example_entity import EXAMPLE_ENTITY
 
 
 class TestGoogleEntityEngine(TestCase):
-
-    def __init__(self, methodName='runTest'):
+    def __init__(self, methodName="runTest"):
         super(TestGoogleEntityEngine, self).__init__(methodName=methodName)
 
     def setUp(self):
@@ -22,7 +21,9 @@ class TestGoogleEntityEngine(TestCase):
         self.assertIsNone(returnEntity.entityType)
 
     def test_search_entity(self):
-        returnEntities = self.wikidataEngine.search_for_entity(query=f'{EXAMPLE_ENTITY.entityName} FC')
+        returnEntities = self.wikidataEngine.search_for_entity(
+            query=f"{EXAMPLE_ENTITY.entityName} FC"
+        )
         topEntity = returnEntities[0]
         self.assertEqual(EXAMPLE_ENTITY.googleId, topEntity.googleId)
         self.assertEqual(EXAMPLE_ENTITY.wikiId, topEntity.wikiId)
@@ -33,5 +34,7 @@ class TestGoogleEntityEngine(TestCase):
         self.assertRaises(Exception, self.wikidataEngine.get_entity, 1)
 
     def test_search_entity_invalid(self):
-        noResults = self.wikidataEngine.search_for_entity(query='jfhsgjfdgjfdbvjghsbvfknsbdfgshgiur')
+        noResults = self.wikidataEngine.search_for_entity(
+            query="jfhsgjfdgjfdbvjghsbvfknsbdfgshgiur"
+        )
         self.assertEqual(len(noResults), 0)
