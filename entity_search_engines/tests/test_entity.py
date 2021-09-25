@@ -4,14 +4,13 @@ from entity_search_engines.entity import Entity
 
 
 class TestEntity(TestCase):
-
-    def __init__(self, methodName='runTest'):
+    def __init__(self, methodName="runTest"):
         super(TestEntity, self).__init__(methodName=methodName)
-        self.testSource = 'testSource'
+        self.testSource = "testSource"
 
     def setUp(self):
         super().setUp()
-        self.exampleEntity = Entity(entityName='TestEntity')
+        self.exampleEntity = Entity(entityName="TestEntity")
 
     def test_set_entity_source(self):
         self.assertIsNone(self.exampleEntity.entitySource)
