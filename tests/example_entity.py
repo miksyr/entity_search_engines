@@ -1,4 +1,4 @@
-from entity_search_engines.entity import Entity
+from entity_search_engines import Entity
 
 EXAMPLE_ENTITY = Entity(
     entityName="Liverpool",

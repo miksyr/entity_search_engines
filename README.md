@@ -9,6 +9,21 @@ It provides;
 ## Installation
 ```pip install entity_search_engines```
 
+### Project layout
+
+| Path | Role |
+| --- | --- |
+| `entity_search_engines/models/` | Domain `Entity` type |
+| `entity_search_engines/http/` | Shared `HttpClient` and Wikimedia-style headers |
+| `entity_search_engines/engines/` | Google Knowledge Graph and Wikidata implementations |
+| `tests/` | Unit tests (not installed with the package) |
+
+Tests are run from the repository root:
+
+```bash
+python -m unittest discover -s tests -p 'test_*.py'
+```
+
 ## Usage
 
 There are some slight differences when using either the Google or Wikidata engines.
@@ -64,4 +79,4 @@ wikiUrl: https://wikidata.org/wiki/Q1130849
 googleUrl: https://www.google.com/search?q=Liverpool%20F.C.
 ```
 
-Similarly, the `wikidataSearchEngine.get_entity(wikiId=WIKI_ID)` can be used to retrieve an Entity class containing relevant information.
+Similarly, `wikidataSearchEngine.get_entity(wiki_id=WIKI_ID)` can be used to retrieve an Entity class containing relevant information.

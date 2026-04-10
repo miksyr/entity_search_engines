@@ -1,11 +1,11 @@
 from unittest import TestCase
 
-from entity_search_engines.entity import Entity
+from entity_search_engines import Entity
 
 
 class TestEntity(TestCase):
     def __init__(self, methodName="runTest"):
-        super(TestEntity, self).__init__(methodName=methodName)
+        super().__init__(methodName=methodName)
         self.testSource = "testSource"
 
     def setUp(self):

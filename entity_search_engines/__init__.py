@@ -1,3 +1,15 @@
-from .entity import Entity
-from .google_entity_engine import GoogleEntityEngine
-from .wikidata_entity_engine import WikidataEntityEngine
+"""Entity resolution helpers for Google Knowledge Graph and Wikidata."""
+
+from .engines import GoogleEntityEngine, WikidataEntityEngine
+from .exceptions import EntitySearchEnginesError, WikidataApiError
+from .http import HttpClient
+from .models import Entity
+
+__all__ = [
+    "Entity",
+    "EntitySearchEnginesError",
+    "GoogleEntityEngine",
+    "HttpClient",
+    "WikidataApiError",
+    "WikidataEntityEngine",
+]

@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "entity_search_engines"
+version = "0.2.0"
+description = "Entity search engines for Google and Wikidata. Helping to link the two together and provide a way to ground entities"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+keywords = [
+    "google knowledge graph",
+    "wikidata",
+    "entity grounding",
+    "entity management",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.24.0",
+    "tqdm>=4.38.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/miksyr/entity_search_engines"
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.0.0",
+    "twine>=5.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["entity_search_engines*"]

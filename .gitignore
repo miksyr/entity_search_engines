@@ -1,4 +1,10 @@
 **.cpython-36.pyc
 __pycache__/
+.env
+.env.*
 .idea/
+build/
+dist/
+*.egg-info/
+.eggs/
 
